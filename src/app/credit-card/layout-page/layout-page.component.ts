@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class LayoutPageComponent {
 
   public sidebarItems = [
-    {label: 'Home', icon: 'home', url:'./'},
+    {label: 'Home', icon: 'home', url:'./home'},
   ]
 }
