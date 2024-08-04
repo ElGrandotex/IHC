@@ -22,7 +22,8 @@
 
     <ng-container matColumnDef="creditNumber">
       <th mat-header-cell *matHeaderCellDef class="text-center"> Tarjeta </th>
-      <td mat-cell *matCellDef="let element" class="text-center"> {{element.creditNumber}} </td>
+      <td mat-cell *matCellDef="let element" class="text-center" style="font-style: italic;"> {{element.creditNumber}}
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="pago">
@@ -36,5 +37,5 @@
 </div>
 
 <ng-template #noData>
-    <h4 class="text-center p-5">No existen registros</h4>
+  <h4 class="text-center p-5">No existen registros</h4>
 </ng-template>
