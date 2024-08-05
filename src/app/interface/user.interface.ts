@@ -2,14 +2,16 @@ export class User{
   id: number;
   name: String;
   creditNumber: number;
-  pago: number;
-  beneficios: boolean
+  cupo: number;
+  pagoPendiente: number;
+  beneficios: number
 
-  constructor(id: number, name: String, creditNumber: number, pago: number, beneficios: boolean){
+  constructor(id: number, name: String, creditNumber: number,cupo:number, pago: number, beneficios: number){
     this.id = id;
     this.name = name;
     this.creditNumber = creditNumber;
-    this.pago = pago
+    this.cupo=cupo;
+    this.pagoPendiente = pago
     this.beneficios = beneficios
   }
 }
