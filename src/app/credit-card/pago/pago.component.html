@@ -1,7 +1,7 @@
 <div class="text-center p-2">
   <h3>
-    <mat-icon>format_list_bulleted</mat-icon>
-    Lista</h3>
+    <mat-icon>payments</mat-icon>
+    Pagos Pendientes</h3>
 </div>
 
 <div class="text-center pb-4">
@@ -12,10 +12,6 @@
 
 <div *ngIf="usersList; else noData">
   <table mat-table [dataSource]="usersList" class="mat-elevation-z15">
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef class="text-center"> No </th>
-      <td mat-cell *matCellDef="let element" class="text-center"> {{element.id}} </td>
-    </ng-container>
 
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef class="text-center"> Nombre </th>
@@ -28,9 +24,9 @@
       </td>
     </ng-container>
 
-    <ng-container matColumnDef="pago">
-      <th mat-header-cell *matHeaderCellDef class="text-center"> Cupo </th>
-      <td mat-cell *matCellDef="let element" class="text-center"> ${{element.cupo}} </td>
+    <ng-container matColumnDef="pagoPendiente">
+      <th mat-header-cell *matHeaderCellDef class="text-center"> Pago Pendiente </th>
+      <td mat-cell *matCellDef="let element" class="text-center"> ${{element.pagoPendiente}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

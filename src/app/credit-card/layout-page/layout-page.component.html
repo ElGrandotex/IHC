@@ -9,13 +9,9 @@
       </button>
     </mat-toolbar>
 
-    <mat-nav-list class="p-4 text-center">
-      <mat-list-item
-      *ngFor="let item of sidebarItems"
-      [routerLink]="item.url"
-      (click)="sidenav.toggle()"
-      >
-      <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+    <mat-nav-list class="p-2">
+      <mat-list-item *ngFor="let item of sidebarItems" [routerLink]="item.url" (click)="sidenav.toggle()">
+        <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
         {{item.label}}
       </mat-list-item>
     </mat-nav-list>
@@ -26,11 +22,20 @@
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon matListItemIcon>menu</mat-icon>
     </button>
+    <mat-icon>credit_card</mat-icon>
     <span class="spacer"></span>
-    <span>Tarjeta de credito</span>
+    <h1>
+      <mat-icon>person</mat-icon>
+      {{username}}
+    </h1>
+    <span class="spacer"></span>
+    <button mat-flat-button (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      Cerrar Sesi&oacute;n</button>
   </mat-toolbar>
 
   <div class="container p-4">
     <router-outlet></router-outlet>
   </div>
+
 </mat-sidenav-container>

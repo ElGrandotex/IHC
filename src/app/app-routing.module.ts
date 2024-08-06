@@ -7,13 +7,17 @@ const routes: Routes = [
     loadChildren: () => import('./credit-card/credit-card.module').then(m => m.CreditCardModule)
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  },
+  {
     path: '',
-    redirectTo: 'credit-card',
+    redirectTo: 'auth',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'credit-card',
+    redirectTo: 'auth',
   }
 ];
 
